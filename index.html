@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — developer & designer.">
+  <style>
+    :root {
+      --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --card: #ffffff;
+      --border: #e7e5e4; --accent: #4f46e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --card: #1c1917; --border: #292524; --accent: #818cf8; }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    nav { position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 10; }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    nav .logo { font-weight: 700; color: var(--fg); }
+    nav ul { display: flex; gap: 24px; list-style: none; }
+    nav ul a { color: var(--muted); font-size: 0.95rem; }
+    nav ul a:hover { color: var(--fg); text-decoration: none; }
+    .hero { padding: 120px 0 80px; }
+    .hero .tag { color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.1; letter-spacing: -0.03em; max-width: 14ch; }
+    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 52ch; margin: 24px 0 32px; }
+    .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; font-weight: 600; background: var(--accent); color: #fff; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--border); margin-left: 8px; }
+    section { padding: 72px 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.6rem; margin-bottom: 32px; letter-spacing: -0.02em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: transform .15s, border-color .15s; }
+    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .chips span { font-size: 0.75rem; padding: 2px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
+    .about { display: grid; gap: 32px; grid-template-columns: 2fr 1fr; }
+    .about p { color: var(--muted); margin-bottom: 16px; }
+    .skills { list-style: none; }
+    .skills li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .contact { text-align: center; }
+    .contact p { color: var(--muted); margin-bottom: 24px; }
+    footer { text-align: center; padding: 32px 0; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+    @media (max-width: 640px) {
+      nav ul { gap: 14px; }
+      .about { grid-template-columns: 1fr; }
+      .hero { padding: 80px 0 56px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="#">YN.</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <p class="tag">Hi, I'm Safa Vhora 👋</p>
+    <h1>I build clean, useful things for the web.</h1>
+    <p>I'm a UX designer based in Dallas. I like turning messy problems into simple, well-crafted products.</p>
+    <a class="btn" href="#work">See my work</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+  </header>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>A short description of what it does and the problem it solves.</p>
+          <div class="chips"><span>React</span><span>Node</span></div>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>A short description of what it does and the problem it solves.</p>
+          <div class="chips"><span>Python</span><span>API</span></div>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>A short description of what it does and the problem it solves.</p>
+          <div class="chips"><span>Design</span><span>Figma</span></div>
+          <a href="#">View project →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About me</h2>
+        <p>Write two or three sentences about your background, what you care about, and what you're looking for next.</p>
+        <p>Add something personal — hobbies, interests, or what you do when you're not working.</p>
+        <a href="resume.pdf">Download résumé</a>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>JavaScript / TypeScript</li>
+          <li>HTML &amp; CSS</li>
+          <li>Python</li>
+          <li>UI / UX Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Let's work together</h2>
+      <p>Have a project or opportunity in mind? I'd love to hear about it.</p>
+      <a class="btn" href="mailto:you@example.com">you@example.com</a>
+      <p style="margin-top:24px">
+        <a href="https://github.com/yourname">GitHub</a> ·
+        <a href="https://linkedin.com/in/yourname">LinkedIn</a> ·
+        <a href="https://twitter.com/yourname">X / Twitter</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>© <script>document.write(new Date().getFullYear())</script> Your Name</footer>
+</body>
+</html>
